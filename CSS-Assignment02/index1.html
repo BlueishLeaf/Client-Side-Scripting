@@ -18,6 +18,7 @@
   <title>Title page</title>  
 
 <link href="./main.d8e0d294.css" rel="stylesheet"></head>
+<link rel="stylesheet" href="stylesheet1.css">
 
 <body class="">
 
@@ -104,8 +105,9 @@
         </div>
 
         <div class="card">
-          <div class="card-block">
+          <div class="card-block" id="workExp">
             <h2>Work</h2>
+            <button id="addWorkBtn">Add new work experience!</button>
             <div class="work-experience">
               <small class="date">2017-2015</small>
               <h3 class="h5 date-title">Web developer - <a href="http://en.orson.io" title="Create professionnal website">Wikipedia.com</a></h3>
@@ -239,21 +241,9 @@
 
         <div class="card">
           <div class="card-block">
-            <h2>Contact</h2>
-            <form action="" class="reveal-content">
-              <div class="form-group">
-                <input type="email" class="form-control" id="email" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="subject" placeholder="Subject">
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" rows="5" placeholder="Enter your message"></textarea>
-              </div>
-              <div class="form-group">
-                <button type="submit" class=" btn btn-primary">Send message</button>
-              </div> 
-            </form>
+            <h2>Other Details</h2>
+            <button id="populateBtn">Populate List Using AJAX</button>
+            <div id="ajaxBlock"></div>
           </div>
         </div>
        
@@ -288,7 +278,7 @@
         </p>
       </div>
     </div>
-      <button class="hideButtons">Hide Cards</button>
+      <button id="toggleCollapseBtn">Toggle Collapse On All Cards</button>
   </div>
 </footer>
 
