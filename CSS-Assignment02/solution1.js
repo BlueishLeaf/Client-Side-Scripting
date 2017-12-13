@@ -57,6 +57,10 @@ $(document).ready(function(){
         slideCard(this);
     });
 
+    $("header").dblclick(function() {
+        $("ul > li").clone(true).appendTo(this);
+    });
+
     $("#addWorkBtn").click(function() {
         var newDiv = document.createElement("div");
         document.getElementById("workExp").appendChild(newDiv);
@@ -64,6 +68,13 @@ $(document).ready(function(){
         newDiv.appendChild(newForm);
         $(newForm).html("<form id='wrkForm'><fieldset><legend>Job Details</legend><label for='jobTitle'>Job</label><input id='jobTitle' type='text'/><label for='dates'>Dates</label><input id='dates' type='text'/><label for='description'>Description</label><br><textarea id='description'></textarea><br><input type='button' id='submitWork' value='Submit'/></fieldset></form>");
         styleForm();
+        var response = prompt("Disable typing in text box? (y/n)");
+        $("#jobTitle").focus(function(){
+            if(response==="y"){
+                $(this).blur();
+            }
+
+        });
         $("#submitWork").click(function () {
             var jobval = document.getElementById("jobTitle").value;
             var dates = document.getElementById("dates").value;
@@ -77,6 +88,13 @@ $(document).ready(function(){
         $(".card").css("transform","rotate(360deg)");
         slideCard(".card");
     });
+
+    $("footer").mouseout(function() {
+        $(this).replaceWith("<h1>The footer has been replaced with this text!</h1>");
+        $(this).css("font","20px Arial").css("text-align","center");
+    });
+
+
 
     function createWorkExp(jobTitle,workDates,jobDescription){
         var newDiv = document.createElement("div");
