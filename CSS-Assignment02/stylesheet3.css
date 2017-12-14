@@ -1,3 +1,6 @@
 .tooltip_templates {
     display: none;
 }
+span{
+    font: 30px Arial;
+}

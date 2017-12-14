@@ -15,7 +15,7 @@ $(document).ready(function(){
 
     });
 
-    $("a:nth-child(6)").mouseenter(function() {
+    $("ul a:nth-child(1)").mouseenter(function() {
         $(this).css("background-color", "#283fc5").css("opacity", "0.6").html("www.kattis.com");
     });
 
@@ -69,7 +69,7 @@ $(document).ready(function(){
         $(newForm).html("<form id='wrkForm'><fieldset><legend>Job Details</legend><label for='jobTitle'>Job</label><input id='jobTitle' type='text'/><label for='dates'>Dates</label><input id='dates' type='text'/><label for='description'>Description</label><br><textarea id='description'></textarea><br><input type='button' id='submitWork' value='Submit'/></fieldset></form>");
         styleForm();
         var response = prompt("Disable typing in text box? (y/n)");
-        $("#jobTitle").focus(function(){
+        $("input").focus(function(){
             if(response==="y"){
                 $(this).blur();
             }
